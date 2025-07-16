@@ -1,0 +1,17 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Allow uploads to resumes folder
+    match /resumes/{allPaths=**} {
+      allow read, write: if resource.size < 5 * 1024 * 1024 && 
+                            resource.contentType == 'application/pdf';
+    }
+    
+    // Allow uploads to company logos (for future implementation)
+    match /logos/{allPaths=**} {
+      allow read: if true;
+      allow write: if resource.size < 2 * 1024 * 1024 && 
+                      resource.contentType.matches('image/.*');
+    }
+  }
+}

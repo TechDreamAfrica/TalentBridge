@@ -1,0 +1,32 @@
+{
+  "name": "talentbridge-ghana",
+  "version": "1.0.0",
+  "description": "A modern recruitment website for TalentBridge Ghana with Firebase integration",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=3000 --open=/index.html",
+    "build": "echo 'Build process not configured for static site'",
+    "deploy": "firebase deploy"
+  },
+  "keywords": [
+    "recruitment",
+    "jobs",
+    "ghana",
+    "firebase",
+    "responsive",
+    "web development"
+  ],
+  "author": "TalentBridge Ghana Development Team",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "dependencies": {
+    "firebase": "^9.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
